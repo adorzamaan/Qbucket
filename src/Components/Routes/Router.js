@@ -4,6 +4,7 @@ import Root from "../../Root/Root";
 import About from "../About/About";
 import Blog from "../Blog/Blog";
 import Home from "../Home/Home";
+import QuizDetails from "../QuizDetails/QuizDetails";
 import Statics from "../Statics/Statics";
 
 const Router = () => {
@@ -14,10 +15,12 @@ const Router = () => {
       children: [
         {
           path: "/",
+          loader: () => fetch(" https://openapi.programming-hero.com/api/quiz"),
           element: <Home></Home>,
         },
         {
           path: "/home",
+          loader: () => fetch(" https://openapi.programming-hero.com/api/quiz"),
           element: <Home></Home>,
         },
         {
@@ -31,6 +34,15 @@ const Router = () => {
         {
           path: "/blog",
           element: <Blog></Blog>,
+        },
+        {
+          path: "/quiz/:id",
+          loader: ({ params }) => {
+            return fetch(
+              ` https://openapi.programming-hero.com/api/quiz/${params.id}`
+            );
+          },
+          element: <QuizDetails></QuizDetails>,
         },
       ],
     },
