@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,44 +21,45 @@ const Header = () => {
         </Link>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <Link
+            <NavLink
+              onClick={({ isActive }) => (isActive ? "active" : undefined)}
               to="/home"
               aria-label="Home"
               title="Home"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/about"
               aria-label="about"
               title="About"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li className="relative">
-            <Link
+            <NavLink
               to="/statics"
               aria-label="statics"
               title="statics"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Statics
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/blog"
               aria-label="blog"
               title="blog"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Blog
-            </Link>
+            </NavLink>
           </li>
         </ul>
         <div className="lg:hidden">
@@ -129,44 +130,44 @@ const Header = () => {
                 <nav>
                   <ul className="space-y-4">
                     <li>
-                      <Link
+                      <NavLink
                         to="/Home"
                         aria-label="Home"
                         title="Home"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Home
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/about"
                         aria-label="about"
                         title="about"
                         className="font-medium tracking-wide text-white last:only:transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         About
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/statics"
                         aria-label="statics"
                         title="statics"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Statics
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/blog"
                         aria-label="blog"
                         title="blog"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Blog
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </nav>

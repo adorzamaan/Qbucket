@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,19 +8,19 @@ const Footer = () => {
         <div className="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row divide-gray-400">
           <ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
             <li>
-              <NavLink to="/home">Home</NavLink>
+              <Link to="/home">Home</Link>
             </li>
 
             <li>
-              <NavLink to="/about">About</NavLink>
+              <Link to="/about">About</Link>
             </li>
 
             <li>
-              <NavLink to="/statics">Statics</NavLink>
+              <Link to="/statics">Statics</Link>
             </li>
 
             <li>
-              <NavLink to="/blog">Blog</NavLink>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
           <div className="flex flex-col justify-center pt-6 lg:pt-0">
