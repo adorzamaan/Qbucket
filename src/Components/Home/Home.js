@@ -31,7 +31,7 @@ const Home = () => {
                 </svg>
               </div>
             </a>
-            <h5 className="mb-4 text-4xl font-extrabold leading-none">
+            <h5 className="mb-4 text-4xl font-extrabold leading-none sm:text-3xl">
               Build engaging
               <br className="hidden md:block" />
               Online Quizs{" "}
@@ -44,7 +44,7 @@ const Home = () => {
             </p>
             <button
               type="button"
-              className="px-8 py-3 font-semibold rounded-full bg-purple-500 text-white"
+              className="sm:px-4 sm:py-2 px-8 py-3 font-semibold rounded-full bg-purple-500 text-white"
             >
               Start Now
             </button>

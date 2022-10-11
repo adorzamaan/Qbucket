@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 
 const Blog = () => {
   const blogs = useLoaderData();
-  console.log(blogs);
   return (
     <div className="container mx-auto justify-center">
       <h3 className="font-bold py-4 text-2xl">Our Blog Page</h3>

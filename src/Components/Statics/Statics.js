@@ -13,11 +13,10 @@ import {
 
 const Statics = () => {
   const quizs = useLoaderData().data;
-  console.log(quizs);
   return (
     <div>
       <h3 className="font-bold py-3 text-2xl">Quizs Anylicts</h3>
-      <div style={{ width: "100%", height: "350px" }}>
+      <div style={{ width: "100%", height: "350px" }} className="shadow-sm">
         <ResponsiveContainer>
           <LineChart
             width={500}

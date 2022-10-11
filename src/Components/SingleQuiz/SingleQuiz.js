@@ -5,12 +5,11 @@ import { toast } from "react-toastify";
 
 const SingleQuiz = ({ question }) => {
   const { options, id, correctAnswer } = question;
-  // const answerOption = options;
 
   const noftiy = () => toast(correctAnswer, { autoClose: 500 });
   const handleCorrectAnswer = (answer) => {
     if (answer === correctAnswer) {
-      return toast.success("Good job,Correct Answer", { autoClose: 1000 });
+      return toast.success("Good job,Correct Answer", { autoClose: 500 });
     } else {
       return toast.error("Failed,try again!!", { autoClose: 500 });
     }

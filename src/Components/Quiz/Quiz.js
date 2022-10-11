@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Quiz = ({ quiz, handleStart }) => {
+const Quiz = ({ quiz }) => {
   const { id, name, logo } = quiz;
   return (
     <div>
