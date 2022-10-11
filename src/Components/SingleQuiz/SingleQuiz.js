@@ -12,8 +12,9 @@ const SingleQuiz = ({ question }) => {
           <div className="text-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
             {answerOption.map((answer) => (
               <div className="flex justify-between">
-                <li className="inline-block list-disc py-2">
-                  <p>{answer}</p>
+                <li className="flex items-center bg-purple-600 rounded-sm m-4 px-12 list-inside py-2">
+                  <input type="radio" name="" id="" />
+                  <p className="text-white py-2 px-2">{answer}</p>
                 </li>
               </div>
             ))}
