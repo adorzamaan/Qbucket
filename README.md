@@ -6,6 +6,12 @@ Develop an awesome quiz test website with react & react router dom .
 
 Hosted in Netlify -> [QBUCKET](https://qbucket-quiz.netlify.app/)
 
+## Feature
+
+-All device responsive (mobile,tablet,Laptop)
+-Modern teachnology use(Js And Js library React.js)
+-Get quiz result (like true or false)
+
 ## React Router Dom v6.4
 
 Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
