@@ -4,10 +4,8 @@ import SingleQuiz from "../SingleQuiz/SingleQuiz";
 
 const QuizDetails = () => {
   const quizDetails = useLoaderData().data;
-  console.log(quizDetails);
   const { name } = quizDetails;
   const questions = quizDetails.questions;
-  console.log(questions);
   return (
     <div>
       <h3 className="font-bold text-2xl py-4">Quiz of {name}</h3>

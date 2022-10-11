@@ -16,7 +16,7 @@ const Quiz = ({ quiz, handleStart }) => {
             {name}
           </span>
           <Link
-            to={`../quiz/${id}`}
+            to={`/quiz/${id}`}
             type="button"
             className="px-3 py-1 font-semibold rounded-full bg-purple-500 text-white"
           >

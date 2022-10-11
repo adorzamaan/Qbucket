@@ -7,6 +7,7 @@ const SingleQuiz = ({ question }) => {
   const { options, id, correctAnswer } = question;
   // const answerOption = options;
 
+  const noftiy = () => toast(correctAnswer, { autoClose: 500 });
   const handleCorrectAnswer = (answer) => {
     if (answer === correctAnswer) {
       return toast.success("Good job,Correct Answer", { autoClose: 1000 });
@@ -27,7 +28,7 @@ const SingleQuiz = ({ question }) => {
               {question.question}
             </h2>
             <p>
-              <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+              <FontAwesomeIcon icon={faEye} onClick={noftiy}></FontAwesomeIcon>
             </p>
           </div>
           <div className="text-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
@@ -40,6 +41,7 @@ const SingleQuiz = ({ question }) => {
                 <p className="px-5" style={{ fontSize: "13px" }}>
                   {answer}
                 </p>
+                <p>{answer.id}</p>
               </div>
             ))}
           </div>
