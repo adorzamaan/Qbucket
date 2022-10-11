@@ -1,9 +1,20 @@
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { toast } from "react-toastify";
 
 const SingleQuiz = ({ question }) => {
-  const answerOption = question.options;
+  const { options, id, correctAnswer } = question;
+  // const answerOption = options;
+
+  const handleCorrectAnswer = (answer) => {
+    if (answer === correctAnswer) {
+      return toast.success("Good job,Correct Answer", { autoClose: 1000 });
+    } else {
+      return toast.error("Failed,try again!!", { autoClose: 500 });
+    }
+  };
+
   return (
     <div className="container">
       <div className="card  bg-base-100 shadow-xl p-5">
@@ -20,9 +31,12 @@ const SingleQuiz = ({ question }) => {
             </p>
           </div>
           <div className="text-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
-            {answerOption.map((answer) => (
-              <div className="flex card relative border m-3 items-center py-5 px-2 hover:border-purple-900 hover:border-2 hover:duration-75 hover:bg-gray-600 hover:text-white">
-                <input type="radio" name="" id="" className="" />
+            {options.map((answer) => (
+              <div
+                onClick={() => handleCorrectAnswer(answer)}
+                className="flex card relative border m-3 items-center py-5 px-2 hover:border-purple-900 hover:border-2 hover:duration-75 hover:bg-gray-600 hover:text-white"
+              >
+                <input type="radio" name="" className="" />
                 <p className="px-5" style={{ fontSize: "13px" }}>
                   {answer}
                 </p>

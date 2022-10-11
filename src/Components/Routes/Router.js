@@ -35,6 +35,9 @@ const Router = () => {
         },
         {
           path: "/blog",
+          loader: () => {
+            return fetch("Blog.json");
+          },
           element: <Blog></Blog>,
         },
         {
