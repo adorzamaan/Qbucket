@@ -23,5 +23,3 @@ Use Tailwind and other tailwind Components ->
 ## Other Resources
 
 Icon -> [FontAwesome](https://fontawesome.com/icons)
-
-## Thank you for Visiting
