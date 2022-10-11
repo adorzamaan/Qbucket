@@ -5,14 +5,14 @@ const Quiz = ({ quiz, handleStart }) => {
   const { id, name, logo } = quiz;
   return (
     <div>
-      <div className="max-w-xs pb-3 rounded-md shadow-md">
+      <div className="max-w-xs pb-3 rounded-md shadow-md bg-gray-800">
         <img
           src={logo}
           alt=""
           className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
         />
         <div className="mt-6 flex justify-between px-4 items-center">
-          <span className="block text-xs font-bold tracking-widest uppercase text-black ">
+          <span className="block text-xs font-bold tracking-widest uppercase text-white ">
             {name}
           </span>
           <Link

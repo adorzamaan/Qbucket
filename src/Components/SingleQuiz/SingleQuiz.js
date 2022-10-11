@@ -11,11 +11,11 @@ const SingleQuiz = ({ question }) => {
           </h2>
           <div className="text-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
             {answerOption.map((answer) => (
-              <div className="flex justify-between">
-                <li className="flex items-center bg-purple-600 rounded-sm m-4 px-12 list-inside py-2">
-                  <input type="radio" name="" id="" />
-                  <p className="text-white py-2 px-2">{answer}</p>
-                </li>
+              <div className="flex card relative border m-3 items-center py-5 px-2 hover:border-purple-900 hover:border-2 hover:duration-75 hover:bg-gray-600 hover:text-white">
+                <input type="radio" name="" id="" className="" />
+                <p className="px-5" style={{ fontSize: "13px" }}>
+                  {answer}
+                </p>
               </div>
             ))}
           </div>
